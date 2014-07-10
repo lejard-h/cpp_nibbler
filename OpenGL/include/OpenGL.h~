@@ -1,0 +1,30 @@
+/*
+** OpenGL.h for nibbler in /home/millon_c/Projets/NIBBLER/cpp_nibbler/OpenGL
+** 
+** Made by millon_c
+** Login   <millon_c@epitech.net>
+** 
+** Started on  Tue Apr  1 17:29:48 2014 millon_c
+// Last update Tue Apr  1 18:00:30 2014 millon_c
+*/
+
+#ifndef OPENGL_H_
+# define OPENGL_H_
+
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <SDL/SDL.h>
+
+class OpenGL
+{
+public:
+  OpenGL();
+  ~OpenGL();
+  void createWin(unsigned int, unsigned int); // throw exception on fail
+  void printSquare(unsigned int, unsigned int, unsigned int, char*); // height, width, size, color
+  void closeWin(); // close win
+  SDL_Event *getEvent(); // getevent un poll event koa
+};
+
+
+#endif
